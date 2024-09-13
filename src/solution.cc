@@ -1,4 +1,4 @@
-#include <iostream>
+
 #include <fstream>
 #include <string>
 
@@ -21,7 +21,7 @@ Student ReadStudentRecFromStream(std::istream& is) {
     ifs >> first_name >> last_name >> throw_away >> student_uin >> throw_away >> student_gpa;
     return Student(full_name, student_uin, student_gpa);
     if (is.fail()) {
-      return Student{};
+      return Student{}; 
     }
   }
   return Student{};
